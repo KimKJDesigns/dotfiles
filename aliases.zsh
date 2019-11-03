@@ -3,7 +3,7 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadcli="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -ahlF --color --group-directories-first"
-weather() { curl -4 wttr.in/${1:-antwerp} }
+weather() { curl -4 wttr.in/${1:-helsingborg} }
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
@@ -43,15 +43,27 @@ alias docker-composer="docker-compose"
 #dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Git
-alias commit="git add . && git commit -m"
-alias gcommit="git add . && git commit"
 alias amend="git commit --amend --no-edit"
 alias amendall="git add . && amend"
-alias wip="commit wip"
-alias gst="git status"
-alias gb="git branch"
-alias gc="git checkout"
-alias gd="git diff"
-alias resolve="git add . && git commit --no-edit"
-alias gl="git log --oneline --decorate --color"
-alias nuke="git clean -df && git reset --hard"
+alias gwip="commit wip"
+alias gresolve="git add . && git commit --no-edit"
+
+alias gs="git status"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glo="git log --oneline"
+alias gli="git log --pretty=format:'%Cgreen%cd%Creset%n%Cred%h%Creset - %s %n%b' --date=default --reverse"
+alias glf="git log --pretty=format:'%h - %s%n%b' --name-status --date=default > ~/desktop/log.txt"
+alias gcom="git checkout master"
+alias gcob="git checkout -b "
+alias gaa="git add . "
+alias gc="git commit -m "
+alias gp="git push"
+alias gm="git merge "
+alias nah="git reset --hard && git clean -df"
+
+#phpspec
+alias phpspec="vendor/bin/phpspec"
+
+#phpunit
+alias phpunit="vendor/bin/phpunit"
+alias puf="phpunit --filter"

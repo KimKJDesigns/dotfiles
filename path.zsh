@@ -13,7 +13,7 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 #export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Load the Laravel Spark installer
-export PATH=/Users/kimskinner/Packages/spark-installer:$PATH
+export PATH="/Users/kimskinner/Packages/spark-installer:$PATH"
 
 # This is unknown, may need to enable it if I have issues
 # export PATH="/usr/local/sbin:$PATH"

@@ -22,10 +22,21 @@ brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
 
+# Spatie Medialibrary
+brew 'jpegoptim'
+brew 'optipng'
+brew 'pngquant'
+brew 'svgo'
+brew 'gifsicle'
+
 # Development
 brew 'php'
+brew 'php@7.3'
 brew 'php@7.2'
 brew 'composer'
+brew 'imagemagick'
+brew 'libmemcached'
+brew 'memcached'
 brew 'mysql'
 brew 'nginx'
 brew 'node'
@@ -36,11 +47,11 @@ brew 'yarn'
 cask 'aerial'
 cask 'adobe-creative-cloud'
 cask 'alfred'
+cask 'dashlane'
 cask 'discord'
 cask 'docker'
 cask 'dozer'
 cask 'github'
-cask 'google-backup-and-sync'
 cask 'insomnia'
 cask 'iterm2'
 cask 'java'
